@@ -1,13 +1,7 @@
-FROM balenalib/raspberry-pi-debian-python:3.11
+FROM python:3.11
 
 RUN apt update && apt -y update
 RUN apt install -y build-essential python3-dev libffi-dev
-
-# Install prerequisites for some Pip package
-RUN apt install libjpeg-dev zlib1g-dev gfortran\
-    libopenblas-dev liblapack-dev libxml2-dev libxslt-dev python-dev
-RUN apt install build-essential libssl-dev libffi-dev \
-    python3-dev cargo pkg-config cmake
 
 RUN pip3 install --no-cache-dir jupyterlab
 
@@ -18,7 +12,7 @@ COPY ./entrypoint.sh /work/entrypoint.sh
 RUN pip3 install --upgrade pip
 
 COPY ./requirements.txt /tmp
-RUN pip3 install --no-cache-dir -r /tmp/requirements.txt
+#RUN pip3 install --no-cache-dir -r /tmp/requirements.txt
 
 RUN mkdir /work/notebooks
 WORKDIR /work/notebooks
