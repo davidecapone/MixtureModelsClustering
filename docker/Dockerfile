@@ -12,7 +12,7 @@ COPY ./entrypoint.sh /work/entrypoint.sh
 RUN pip3 install --upgrade pip
 
 COPY ./requirements.txt /tmp
-RUN pip3 install --no-cache-dir -r /tmp/requirements.txt
+#RUN pip3 install --no-cache-dir -r /tmp/requirements.txt
 
 RUN mkdir /work/notebooks
 WORKDIR /work/notebooks
