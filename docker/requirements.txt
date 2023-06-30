@@ -1,0 +1,29 @@
+# Useful packages
+beautifulsoup4
+cython
+pytest
+requests
+scrapy
+cryptography
+
+# Data & Visualization
+altair
+bokeh
+Pillow
+matplotlib
+numpy
+pandas
+seaborn
+# traces
+
+# Statistics
+pyro-ppl
+
+# Machine Learning
+# gensim
+# keras
+# nltk
+# scipy
+scikit-learn
+# statsmodels
+torch

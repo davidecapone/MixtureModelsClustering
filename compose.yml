@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+
+  jupyterlab:
+    build:
+      context: ./docker
+      dockerfile: ./Dockerfile
+    restart: always
+    user: root
+    volumes:
+      - ./notebooks:/work/notebooks
+    ports:
+      - 8081:8081
