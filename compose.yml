@@ -11,4 +11,4 @@ services:
     volumes:
       - ./notebooks:/work/notebooks
     ports:
-      - 8081:8081
+      - 8888:8081
